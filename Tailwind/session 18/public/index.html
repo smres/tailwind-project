@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PostCSS</title>
+  <link rel="stylesheet" href="./tailwind.css" />
+</head>
+
+<body class="bg-gray-300 h-screen flex justify-center items-center">
+  <div class="w-56">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo molestiae itaque in aperiam
+    voluptatibus ipsam
+    perferendis laborum et nisi? Omnis doloribus optio blanditiis, nemo fuga at iusto sequi quasi rerum!</div>
+  <div class="relative" x-data="{ isOpen: false }">
+    <button @click="isOpen = !isOpen"
+      class="z-10 relative px-4 py-2 bg-blue-500 text-white rounded-lg inline-flex items-center focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white">
+      <span>Show more</span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-1">
+        <path fill-rule="evenodd"
+          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+    <button x-show="isOpen" @click="isOpen = false" class="inset-0 fixed bg-gray-200 opacity-70"></button>
+    <div x-show="isOpen" class="bg-white w-56 mt-2 rounded-lg overflow-hidden border border-gray-200 absolute">
+      <a href="#" class="block text-gray-700 p-2 hover:bg-gray-100">Account</a>
+      <a href="#" class="block text-gray-700 p-2 hover:bg-gray-100">Support</a>
+      <a href="#" class="block text-gray-700 p-2 hover:bg-gray-100">Settings</a>
+    </div>
+  </div>
+
+  <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>
