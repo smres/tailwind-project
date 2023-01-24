@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PostCSS</title>
+  <link rel="stylesheet" href="./tailwind.css" />
+</head>
+
+<body class="bg-blue-700 h-screen flex justify-center items-center">
+  <div x-data="{tabNo : 1, activeClass : 'text-blue-600 bg-white' }" class="max-w-md flex flex-col gap-4 w-full">
+    <!-- Tab Header -->
+    <div class="bg-blue-400 p-2 rounded-xl flex gap-x-2 justify-between items-center cursor-pointer font-bold text-white">
+      <button @click="tabNo = 1" :class="tabNo === 1 ? activeClass : ''" class="w-full p-2 text-center hover:bg-blue-300 hover:text-white rounded-xl focus:ring-2 focus:ring-white ring-offset-2 ring-offset-blue-400 focus:ring-opacity-50">Recent</button>
+      <button @click="tabNo = 2" :class="tabNo === 2 ? activeClass : ''" class="w-full p-2 text-center hover:bg-blue-300 hover:text-white rounded-xl focus:ring-2 focus:ring-white ring-offset-2 ring-offset-blue-400 focus:ring-opacity-50">Popular</button>
+      <button @click="tabNo = 3" :class="tabNo === 3 ? activeClass : ''" class="w-full p-2 text-center hover:bg-blue-300 hover:text-white rounded-xl focus:ring-2 focus:ring-white ring-offset-2 ring-offset-blue-400 focus:ring-opacity-50">Trending</button>
+    </div>
+    <!-- Tab Content -->
+    <!-- <div class="bg-white p-2 rounded-xl">
+      <div class="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+      </div>
+      <div class="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+      </div>
+      <div class="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+      </div>
+    </div> -->
+    
+    
+    <div class="bg-white p-2 rounded-xl cursor-pointer">
+      <!-- content - 1 -->
+      <div x-show="tabNo === 1">
+      <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+        <div class="font-bold text-sm">
+          <p class="mb-2">
+            Does drinking coffee make you smarter?1
+          </p>
+          <div class="text-gray-400"> 5h ago &bull; 5comments &bull; 2 shares</div>
+        </div>
+      </div>
+      <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+        <div class="font-bold text-sm">
+          <p class="mb-2">
+            Does drinking coffee make you smarter?1
+          </p>
+          <div class="text-gray-400"> 5h ago &bull; 5comments &bull; 2 shares</div>
+        </div>
+      </div>
+    </div>
+      <!-- content - 2 -->
+      <div x-show="tabNo === 2">
+      <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+        <div class="font-bold text-sm">
+          <p class="mb-2">
+            Does drinking coffee make you smarter?2
+          </p>
+          <div class="text-gray-400"> 5h ago &bull; 5comments &bull; 2 shares</div>
+        </div>
+      </div>
+      <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+        <div class="font-bold text-sm">
+          <p class="mb-2">
+            Does drinking coffee make you smarter?2
+          </p>
+          <div class="text-gray-400"> 5h ago &bull; 5comments &bull; 2 shares</div>
+        </div>
+      </div>
+    </div>
+      <!-- content - 3 -->
+      <div x-show="tabNo === 3">
+      <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+        <div class="font-bold text-sm">
+          <p class="mb-2">
+            Does drinking coffee make you smarter?3
+          </p>
+          <div class="text-gray-400"> 5h ago &bull; 5comments &bull; 2 shares</div>
+        </div>
+      </div>
+      <div class="hover:bg-gray-100 px-2 py-4 rounded-xl">
+        <div class="font-bold text-sm">
+          <p class="mb-2">
+            Does drinking coffee make you smarter?3
+          </p>
+          <div class="text-gray-400"> 5h ago &bull; 5comments &bull; 2 shares</div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>

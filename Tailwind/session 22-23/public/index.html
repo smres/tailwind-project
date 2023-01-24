@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PostCSS</title>
+  <link rel="stylesheet" href="./tailwind.css" />
+</head>
+
+<body class="bg-blue-700 h-screen flex justify-center items-center">
+  <div class="max-w-md bg-white p-4 rounded-xl w-full flex flex-col gap-4">
+    <!-- accordian No.1 -->
+    <div x-data="{tabOne : false}">
+      <!-- header -->
+      <div @click="tabOne = !tabOne" class="bg-blue-600 text-white p-2 rounded-lg cursor-pointer flex items-center justify-between">
+        <span>what is irefund policy ?</span>
+        <svg :class="tabOne ? 'rotate-180' : '' " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-all duration-500">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>       
+      </div>
+      <!-- content -->
+      <div x-show="tabOne === true " class="px-4 pt-2">
+        If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.
+      </div>
+    </div>
+    <!-- accordian No.2 -->
+    <div x-data="{tabTwo : false}">
+      <!-- header -->
+      <div @click="tabTwo = !tabTwo" class="bg-blue-600 text-white p-2 rounded-lg cursor-pointer flex items-center justify-between">
+        <span>Do you offer technical support?</span>
+        <svg :class="tabTwo ? 'rotate-180' : '' " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  transition-all duration-500">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </div>
+      <!-- content -->
+      <div x-show="tabTwo === true " class="px-4 pt-2">
+        If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.
+      </div>
+    </div>
+  </div>
+
+  <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>
