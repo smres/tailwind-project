@@ -28,8 +28,8 @@
         </div>
     </div>
     <!-- BreadCrumbs -->
-    <div class="flex items-center gap-x-2">
-        <span>تلفن همراه</span>
+    <div class="flex items-center gap-x-2 px-4 text-sm mb-8">
+        <span class="text-orange-500">تلفن همراه</span>
         <span>
             <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -37,7 +37,7 @@
                     stroke="#222F5D" />
             </svg>
         </span>
-        <span>برند آیفون</span>
+        <span class="text-orange-500">برند آیفون</span>
         <span>
             <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -45,7 +45,52 @@
                     stroke="#222F5D" />
             </svg>
         </span>
-        <span>آیفون 13</span>
+        <span class="text-gray-500">آیفون 13</span>
+    </div>
+    <!-- single product -->
+    <div class="px-4 flex flex-col items-center gap-y-9">
+        <div class="w-4/5 max-w-xs">
+            <img class="w-full" src="/assets/images/iphone13.jpg" alt="">
+        </div>
+        <div class="w-full">
+            <div class="mb-8 text-center">
+                <h1 class="text-slate-800 font-bold text-lg mb-1">
+                    گوشی آیفون 13 pro max
+                </h1>
+                <h2 class="font-thin text-gray-500">Apple Iphone 13 256 GB</h2>
+            </div>
+            <!-- color selection -->
+            <div class="flex items-center justify-evenly w-full mb-5 ">
+                <span class="text-slate-800">انتخاب رنگ</span>
+                <div x-data="{color: 'red' }" class="flex items-center">
+                    <div @click="color='red'" :class="color === 'red' ? 'ring-1 ring-red-400' : '' "
+                        class="flex justify-center items-center w-7 h-7 sm:w-9 sm:h-9 rounded-full cursor-pointer bg-red-400 border-white border-2">
+                        <svg x-transition x-show="color === 'red'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            class="stroke-white w-5 h-5 sm:w-6 sm:h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+                    </div>
+                    <div @click="color='blue'" :class="color === 'blue' ? 'ring-1 ring-blue-400' : '' "
+                        class="flex justify-center items-center w-7 h-7 sm:w-9 sm:h-9 rounded-full cursor-pointer bg-blue-400 border-white border-2 -mr-1.5">
+                        <svg x-transition x-show="color === 'blue'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            class="stroke-white w-5 h-5 sm:w-6 sm:h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+                    </div>
+                    <div @click="color='green'" :class="color === 'green' ? 'ring-1 ring-green-400' : '' "
+                        class="flex justify-center items-center w-7 h-7 sm:w-9 sm:h-9 rounded-full cursor-pointer bg-green-400 border-white border-2 -mr-1.5">
+                        <svg x-transition x-show="color === 'green'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            class="stroke-white w-5 h-5 sm:w-6 sm:h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+        </div>
     </div>
 
     <script src="//unpkg.com/alpinejs" defer></script>
